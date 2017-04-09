@@ -1,0 +1,22 @@
+{
+  "name": "styled-flexbox",
+  "version": "0.1.0",
+  "description": "Flexbox Tools made with Styled Components",
+  "main": "dist/index.js",
+  "repository": "git@github.com:sallar/styled-flexbox.git",
+  "author": "Sallar Kaboli <sallar.kaboli@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --out-dir dist"
+  },
+  "dependencies": {
+    "react": "^15.5.3",
+    "styled-components": "^1.4.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
