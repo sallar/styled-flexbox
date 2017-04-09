@@ -1,6 +1,6 @@
 {
   "name": "styled-flexbox",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Flexbox Tools made with Styled Components",
   "main": "dist/index.js",
   "repository": "git@github.com:sallar/styled-flexbox.git",
@@ -10,7 +10,7 @@
     "build": "babel src --out-dir dist"
   },
   "dependencies": {
-    "react": "^15.5.3",
+    "prop-types": "^15.5.4",
     "styled-components": "^1.4.4"
   },
   "devDependencies": {
