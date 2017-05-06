@@ -7,6 +7,9 @@ function buildStyle(props) {
   if (props.align) {
     output['align-items'] = props.align;
   }
+  if (props.alignContent) {
+    output['align-content'] = props.alignContent;
+  }
   if (props.justify) {
     output['justify-content'] = props.justify;
   }
@@ -46,6 +49,14 @@ Flex.propTypes = Box.propTypes = {
     'stretch',
     'center',
     'baseline',
+    'flex-start',
+    'flex-end'
+  ]),
+  alignContent: PropTypes.oneOf([
+    'stretch',
+    'center',
+    'space-around',
+    'space-between',
     'flex-start',
     'flex-end'
   ]),
