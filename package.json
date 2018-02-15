@@ -10,13 +10,16 @@
     "build": "babel src --out-dir dist"
   },
   "dependencies": {
-    "prop-types": "^15.5.4",
-    "styled-components": "^1.4.4"
+    "prop-types": "^15.5.4"
+  },
+  "peerDependencies": {
+    "styled-components": "^3.1.6"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-react": "^6.24.1",
+    "styled-components": "^3.1.6"
   }
 }
