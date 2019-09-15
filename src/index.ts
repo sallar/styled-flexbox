@@ -4,7 +4,7 @@ import styled from 'styled-components';
 interface FlexProps {
   flexAuto?: boolean;
   flexColumn?: boolean;
-  wrap?: boolean;
+  wraps?: boolean;
   align?: 'stretch' | 'center' | 'baseline' | 'flex-start' | 'flex-end';
   alignContent?:
     | 'stretch'
@@ -40,7 +40,7 @@ function buildStyle(props: FlexProps) {
   if (props.flexColumn) {
     output['flex-direction'] = 'column';
   }
-  if (props.wrap) {
+  if (props.wraps) {
     output['flex-wrap'] = 'wrap';
   }
   if (props.width) {
@@ -60,7 +60,7 @@ export const Box = styled.div<FlexProps>(props => buildStyle(props));
 (Flex as any).propTypes = (Box as any).propTypes = {
   flexAuto: PropTypes.bool,
   flexColumn: PropTypes.bool,
-  wrap: PropTypes.bool,
+  wraps: PropTypes.bool,
   width: PropTypes.string,
   align: PropTypes.oneOf([
     'stretch',
