@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "prepare": "npm run build",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "echo 'OK'"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
