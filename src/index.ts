@@ -1,8 +1,29 @@
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-function buildStyle(props) {
-  const output = {};
+interface FlexProps {
+  flexAuto?: boolean;
+  flexColumn?: boolean;
+  wrap?: boolean;
+  align?: 'stretch' | 'center' | 'baseline' | 'flex-start' | 'flex-end';
+  alignContent?:
+    | 'stretch'
+    | 'center'
+    | 'space-around'
+    | 'space-between'
+    | 'flex-start'
+    | 'flex-end';
+  justify?:
+    | 'center'
+    | 'space-around'
+    | 'space-between'
+    | 'flex-start'
+    | 'flex-end';
+  width?: string;
+}
+
+function buildStyle(props: FlexProps) {
+  const output: any = {};
 
   if (props.align) {
     output['align-items'] = props.align;
@@ -26,25 +47,21 @@ function buildStyle(props) {
     output.width = props.width;
   }
 
-  const res = Object.keys(output).reduce((str, key) => {
-    return str + `${key}: ${output[key]};`;
-  }, '');
-  return res;
+  return output;
 }
 
-export const Flex = styled.div`
-  display: flex;
-  ${props => buildStyle(props)}
-`;
+export const Flex = styled.div<FlexProps>(props => ({
+  display: 'flex',
+  ...buildStyle(props)
+}));
 
-export const Box = styled.div`
-  ${props => buildStyle(props)}
-`;
+export const Box = styled.div<FlexProps>(props => buildStyle(props));
 
-Flex.propTypes = Box.propTypes = {
+(Flex as any).propTypes = (Box as any).propTypes = {
   flexAuto: PropTypes.bool,
   flexColumn: PropTypes.bool,
   wrap: PropTypes.bool,
+  width: PropTypes.string,
   align: PropTypes.oneOf([
     'stretch',
     'center',

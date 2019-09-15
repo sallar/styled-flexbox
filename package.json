@@ -8,19 +8,20 @@
   "license": "MIT",
   "scripts": {
     "prepare": "npm run build",
-    "build": "babel src --out-dir dist"
+    "build": "tsc"
   },
   "dependencies": {
-    "prop-types": "^15.5.4"
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "styled-components": "^3.1.6"
+    "styled-components": "^4.3.2",
+    "react": "^16.8.6"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-react": "^6.24.1",
-    "styled-components": "^3.1.6"
+    "@types/prop-types": "^15.7.2",
+    "@types/styled-components": "4.1.8",
+    "react": "^16.8.6",
+    "styled-components": "^4.3.2",
+    "typescript": "^3.6.3"
   }
 }
